@@ -196,27 +196,25 @@ a:hover {
   margin-bottom: 3rem;
 }
 /* COLLABS */
-.display {
-  border: 1px solid red;
+.floating-display {
+  /* border: 1px solid red; */
   width: 400px;
   height: 400px;
   position: fixed;
   top: 100px;
   right: 3rem;
 }
-/* .media-display-container {
-  position: absolute;
-  top: 100px;
-  right: 0;
-} */
+.media-display-container {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
 .media-displayed {
   width: 400px;
 }
 .collabs-list {
-  /* border: 1px solid red; */
   color: var(--clr-main);
   line-height: 1.5;
-  width: 40%;
+  width: 60%;
 }
 /* .collabs-list li {
   position: relative;
@@ -232,5 +230,9 @@ a:hover {
 }
 .collab--location {
   font-style: italic;
-  color: var(--clr-main);
+}
+.collab--link {
+  display: block;
+  margin-top: .5rem;
+  font-style: italic;
 }
