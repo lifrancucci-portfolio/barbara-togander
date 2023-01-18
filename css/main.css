@@ -60,9 +60,6 @@ a:hover {
   margin: 1.5rem 3rem;
   text-transform: uppercase;
 }
-.translatable-element:lang(en) {
-  display: none;
-}
 .selector-item:hover {
   font-style: italic;
   cursor: pointer;
@@ -113,6 +110,9 @@ a:hover {
 }
 .tec-info a {
   color: var(--clr-main);
+}
+.translatable-element:lang(en) {
+  display: none;
 }
 /* LAYOUTS */
 .container {
