@@ -1,9 +1,16 @@
 <nav class="main-nav">
   <ul>
-    <li class="nav-item"><a href="{{ 'projects/' | relative_url }}">Proyectos</a></li>
-    <li class="nav-item"><a href="{{ 'collabs/' | relative_url }}">Colaboraciones</a></li>
-    <li class="nav-item"><a href="{{ 'interviews/' | relative_url }}">Entrevistas</a></li>
-    <li class="nav-item"><a href="{{ 'bio/' | relative_url }}">Biografía</a></li>
-    <li class="nav-item"><a href="#">En/Es</a></li>
+
+    <li class="nav-item translatable-element" lang="es"><a href="{{ 'proyectos/' | relative_url }}">Proyectos</a></li>
+    <li class="nav-item translatable-element" lang="en"><a href="{{ 'en/projects/' | relative_url }}">Projects</a></li>
+    <li class="nav-item translatable-element" lang="es"><a href="{{ 'colaboraciones/' | relative_url }}">Colaboraciones</a></li>
+    <li class="nav-item translatable-element" lang="en"><a href="{{ 'en/collabs/' | relative_url }}">Collaborations</a></li>
+    <li class="nav-item translatable-element" lang="es"><a href="{{ 'entrevistas/' | relative_url }}">Entrevistas</a></li>
+    <li class="nav-item translatable-element" lang="en"><a href="{{ 'en/interviews/' | relative_url }}">Interviews</a></li>
+    <li class="nav-item translatable-element" lang="es"><a href="{{ 'biografia/' | relative_url }}">Biografía</a></li>
+    <li class="nav-item translatable-element" lang="en"><a href="{{ 'en/bio/' | relative_url }}">Biography</a></li>
+
+    <li id="lang-selector" class="selector-item">En/Es</li>
+
   </ul>
 </nav>

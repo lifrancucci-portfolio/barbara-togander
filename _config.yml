@@ -22,20 +22,24 @@ title: Barbara Togander
 email: lisandro.francucci@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Test site for artist Barbara Togander.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: # jekyllrb
-github_username:  # jekyll
-permalink: pretty
+  baseurl: "" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: # jekyllrb
+# github_username:  # jekyll
 
 # Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+# theme: minima
+# plugins:
+#  - jekyll-feed
 
 domain: lifrancucci-portfolio.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://lifrancucci-portfolio.github.io/barbara-togander  # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: /barbara-togander/      # place folder name if the site is served in a subfolder
+baseurl: /barbara-togander     # place folder name if the site is served in a subfolder
+permalink: pretty
+
+# LANGUAGE
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -55,10 +55,17 @@ a:hover {
 .main-nav ul {
   display: flex;
 }
-.main-nav .nav-item {
+.main-nav .nav-item,
+.main-nav .selector-item {
   margin: 1.5rem 3rem;
-  /* font-weight: bold; */
   text-transform: uppercase;
+}
+.translatable-element:lang(en) {
+  display: none;
+}
+.selector-item:hover {
+  font-style: italic;
+  cursor: pointer;
 }
 .items-list {
   margin-top: 3rem;
@@ -101,17 +108,14 @@ a:hover {
   font-size: var(--size-main);
 }
 .tec-info {
-  /* color: var(--clr-main); */
   line-height: 1.5; 
   margin-top: 1.5rem;
-  /* font-style: italic; */
 }
 .tec-info a {
   color: var(--clr-main);
 }
 /* LAYOUTS */
 .container {
-  /* border: 1px solid red; */
   display: flex;
   position: relative;
   width: 80%;
@@ -122,7 +126,8 @@ a:hover {
   justify-content: center;
 }
 .container--lists, 
-.container--project {
+.container--project,
+.container--bio {
   padding-top: 5rem;
   padding-left: 3rem;
   align-items: flex-start;
@@ -131,6 +136,7 @@ a:hover {
 /* Hide scrollbar */
 .container--lists, 
 .container--project,
+.container--bio,
 .container--project > .section--text,
 .container--project > .section--image {
   -ms-overflow-style: none;  /* IE and Edge */
@@ -139,6 +145,7 @@ a:hover {
 /* Hide scrollbar for Chrome, Safari and Opera */
 .container--lists::-webkit-scrollbar, 
 .container--project::-webkit-scrollbar,
+.container--bio::-webkit-scrollbar,
 .container--project > .section--text::-webkit-scrollbar,
 .container--project > .section--image::-webkit-scrollbar {
   display: none; 
@@ -156,6 +163,9 @@ a:hover {
   align-items: flex-start;
   justify-content: flex-start;
 }
+.bio > .section--body {
+  width: 55%;
+}
 .container--project > .section--text {
   width: 45%;
   padding-right: 1.5rem;
@@ -169,8 +179,9 @@ a:hover {
   margin-bottom: 3rem;
   overflow-y: scroll;
 }
-.individual__section .section--body {
+.section--body {
   margin-top: 3rem;
+  margin-bottom: 5rem;
 }
 /* .section--body img {
   width: 80%;
