@@ -111,6 +111,11 @@ a:hover {
 .tec-info a {
   color: var(--clr-main);
 }
+.releases-list {
+  display: block;
+  margin-top: 1.5rem;
+  color: var(--clr-main);
+}
 .translatable-element:lang(en) {
   display: none;
 }

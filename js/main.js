@@ -40,8 +40,8 @@ function changePageLanguage() {
 
     switch(true) 
     {
-      case (currentLocation.includes('biografia/')):
-        locationES = locationES + 'biografia/';
+      case (currentLocation.includes('bio/')):
+        locationES = locationES + 'bio/';
         locationEN = locationEN + 'bio/';
       break;
       case (currentLocation.includes('proyectos/')):
@@ -64,13 +64,10 @@ function changePageLanguage() {
   // If current language is 'en', change to 'es' vesrion of the page
   if(pageLanguage == 'en') 
   {
-    console.log("EN");
-    console.log(currentLocation);
-
     switch(true) 
     {
       case (currentLocation.includes('bio/')):
-        locationES = locationES + 'biografia/';
+        locationES = locationES + 'bio/';
         locationEN = locationEN + 'bio/';
       break;
       case (currentLocation.includes('projects/')):
@@ -90,17 +87,6 @@ function changePageLanguage() {
     }
     location.href = currentLocation.replace(locationEN, locationES);
   }
-
-
-  // if(pageLanguage === 'es') 
-  // {
-  //   location.href = currentLocation.replace(locationES, locationEN);
-  // } 
-  // If language is 'en' go to en/ folder
-  // else if(pageLanguage === 'en') 
-  // {
-  //   location.href = currentLocation.replace(locationEN, locationES);
-  // }
 }
 
 langSelector.addEventListener('click', changePageLanguage);
