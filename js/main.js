@@ -1,5 +1,18 @@
 function contentLoaded() {
 
+const mainTitle = document.getElementById('main-title');
+const mainNav = document.getElementById('main-navigation');
+
+mainTitle.addEventListener('click', function() {
+  if(mainNav.classList.contains('active')) {
+    mainNav.classList.remove('active');
+  }
+  else
+  {
+    mainNav.classList.add('active');
+  }
+})
+ 
 /* CHANGE LANGUAGE ON CLICK */ 
 const langSelector = document.getElementById('lang-selector');
 const translatableElements = document.querySelectorAll('.translatable-element');

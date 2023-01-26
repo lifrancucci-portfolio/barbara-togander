@@ -60,6 +60,9 @@ a:hover {
   margin: 1.5rem 3rem;
   text-transform: uppercase;
 }
+.nav_close-item {
+  display: none;
+}
 .selector-item:hover {
   font-style: italic;
   cursor: pointer;
@@ -251,4 +254,50 @@ a:hover {
   display: block;
   margin-top: .5rem;
   font-style: italic;
+}
+
+/* ******************************* */
+/* ******** MEDIA QUERIES ******** */
+/* ******************************* */
+
+/* PHONE ONLY */
+@media screen and (max-width: 600px) {
+  /* Main Container */
+  .container {
+    /* border: 1px solid green; */
+    width: 100vw;
+    height: 100vh;
+  }
+  /* Nav */
+  .main-navigation {
+    background-color: var(--clr-light);
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 0;
+    padding-bottom: 0;
+    transform: scaleY(0%);
+    transform-origin: bottom;
+    opacity: 0;
+    transition: all .2s ease-in;
+  }
+  .main-navigation.active {
+    height: 100vh;
+    padding-bottom: 3rem;
+    transform: scaleY(100%);
+    opacity: 1;
+  }
+  .main-nav ul {
+    flex-direction: column;
+  }
+  .main-nav .nav-item, 
+  .main-nav .selector-item {
+    margin: 1.5rem 0;
+  }
+  .nav_close-item {
+    display: block;
+  }
+
+  
 }
