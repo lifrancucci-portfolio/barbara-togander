@@ -1,6 +1,5 @@
 function contentLoaded() {
 
-
 /* MENU DISPLAY FOR MOBILE */
 // Please adjust and check
 // const mainTitle = document.getElementById('main-title');
