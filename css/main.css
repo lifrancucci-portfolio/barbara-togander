@@ -216,21 +216,21 @@ a:hover {
 }
 /* COLLABS */
 .floating-display {
-  border: 1px solid red;
   width: 400px;
   height: 400px;
   position: fixed;
   top: 100px;
   right: 3rem;
 }
-.media-display-container {
-  /* margin-top: 1rem;
-  margin-bottom: 3rem; */
-}
-.media-displayed {
+.floating-display > .media-displayed {
   width: 400px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  display: block;
+}
+.media-display-container > .media-displayed {
+  width: 400px;
+  /* margin-top: 1rem;
+  margin-bottom: 1rem; */
+  display: none;
 }
 .collabs-list {
   color: var(--clr-main);

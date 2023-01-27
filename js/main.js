@@ -186,9 +186,44 @@ function changePageLanguage() {
 langSelector.addEventListener('click', changePageLanguage);
 
 /* For Collabs section only */
-// let collabsSection;
-// if(collabsSection = document.getElementById('collabs-section')) {
-//   const collabsLists = document.querySelectorAll('.collabs-list');
-// }
+if( mainContainer.id == 'collabs-section' )
+{
+  // Get all the li elements that have pictures
+  let mediaLis = document.querySelectorAll('.has-media');
+  mediaLis = Array.from(mediaLis);
+
+  // Get the floating display for images
+  const floatingDisplay = document.getElementById('floating-display');
+
+  // Create a function to display div of class
+  // 'media-display-container inside floatingDisplay
+  function displayImage(el) {
+
+    let children = el.children;
+    children = Array.from(children);
+
+    children.forEach( child => {
+      if( child.classList.contains('media-display-container') )
+      {
+        console.log("Entered!");
+        let emptyDisplay = floatingDisplay.innerHTML;
+        floatingDisplay.innerHTML = child.innerHTML;
+
+        child.addEventListener('mouseout', (e) => {
+          console.log("Left!");
+          floatingDisplay.innerHTML = emptyDisplay;
+        })
+      }
+    })
+  }
+  
+  mediaLis.forEach( el => {
+    el.addEventListener('mouseenter', (e) => {
+      // Call displayImage for the element that was hovered
+      displayImage(e.target);
+    });
+  })
+
+}
 
 }
