@@ -224,8 +224,8 @@ a:hover {
   right: 3rem;
 }
 .media-display-container {
-  margin-top: 1rem;
-  margin-bottom: 3rem;
+  /* margin-top: 1rem;
+  margin-bottom: 3rem; */
 }
 .media-displayed {
   width: 400px;
@@ -264,9 +264,10 @@ a:hover {
 @media screen and (max-width: 600px) {
   /* Main Container */
   .container {
+    flex-direction: column;
     /* border: 1px solid green; */
     width: 100vw;
-    height: 100vh;
+    height: 100%;
   }
   /* Nav */
   .main-navigation {
@@ -298,6 +299,33 @@ a:hover {
   .nav_close-item {
     display: block;
   }
-
+  .close {
+    right: 1rem;
+  }
+  .container--project {
+    overflow-y: auto;
+  }
+  .container--lists, 
+  .container--project, 
+  .container--bio {
+    padding: 5rem 1rem;
+  }
+  .container--project > .section--image,
+  .container--project > .section--text {
+    width: 100%;
+    padding: 0;
+  }
+  .individual__section {
+    height: auto;
+    overflow-y: visible;
+    margin-bottom: 0;
+  }
+  .title--category {
+    left: 1rem;
+  }
+  .media-displayed {
+    width: 300px;
+    margin-top: 1rem;
+  }
   
 }
