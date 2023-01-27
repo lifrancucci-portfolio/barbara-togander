@@ -82,7 +82,7 @@ function changePageLanguage() {
     const subpages = 
     [
       { 
-        esTitle: 'proy-audiovisual/',
+        esTitle: 'proyecto-audiovisual/',
         enTitle: 'av-project/' 
       },
       { 
@@ -90,6 +90,9 @@ function changePageLanguage() {
       },
       { 
         esTitle: 'paraiso-en-blanco/',       enTitle: 'an-unsolved-blank-paradise/' 
+      },
+      { 
+        esTitle: 'togander-cuarteto/',       enTitle: 'togander-cuartet/' 
       },
     ]
 
