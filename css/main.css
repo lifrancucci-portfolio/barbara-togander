@@ -216,7 +216,7 @@ a:hover {
 }
 /* COLLABS */
 .floating-display {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   width: 400px;
   height: 400px;
   position: fixed;
@@ -229,6 +229,8 @@ a:hover {
 }
 .media-displayed {
   width: 400px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .collabs-list {
   color: var(--clr-main);
