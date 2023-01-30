@@ -325,7 +325,11 @@ a:hover {
   .title--category {
     left: 1rem;
   }
-  .media-displayed {
+  .floating-display {
+    display: none;
+  }
+  .media-display-container > .media-displayed {
+    display: block;
     width: 300px;
     margin-top: 1rem;
   }
