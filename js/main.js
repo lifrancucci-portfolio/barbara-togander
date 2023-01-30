@@ -153,36 +153,11 @@ function changePageLanguage() {
           newLocation = newLocation.replace(subpage.enTitle, subpage.esTitle);
         }
       })
-
-      // {
-      //   case (currentLocation.includes('bio/')):
-      //     locationES = locationES + 'bio/';
-      //     locationEN = locationEN + 'bio/';
-      //   break;
-      //   case (currentLocation.includes('projects/')):
-      //     locationES = locationES + 'proyectos/';
-      //     locationEN = locationEN + 'projects/';
-      //   break;
-      //   case (currentLocation.includes('collabs/')):
-      //     locationES = locationES + 'colaboraciones/';
-      //     locationEN = locationEN + 'collabs/';
-      //   break;
-      //   case (currentLocation.includes('interviews/')):
-      //     locationES = locationES + 'entrevistas/';
-      //     locationEN = locationEN + 'interviews/';
-      //   break;
-      //   default: 
-      //     location.href;
-      // }
-      // location.href = currentLocation.replace(locationEN, locationES);
     }
-
     // Finally, got to location
     location.href = newLocation;
-
   }
 }
-
 langSelector.addEventListener('click', changePageLanguage);
 
 /* For Collabs section only */
@@ -205,14 +180,13 @@ if( mainContainer.id == 'collabs-section' )
     children.forEach( child => {
       if( child.classList.contains('media-display-container') )
       {
-        console.log("Entered!");
         let emptyDisplay = floatingDisplay.innerHTML;
         floatingDisplay.innerHTML = child.innerHTML;
 
-        child.addEventListener('mouseout', (e) => {
-          console.log("Left!");
-          floatingDisplay.innerHTML = emptyDisplay;
-        })
+        // child.addEventListener('mouseout', (e) => {
+        //   console.log("Left!");
+        //   floatingDisplay.innerHTML = emptyDisplay;
+        // })
       }
     })
   }
