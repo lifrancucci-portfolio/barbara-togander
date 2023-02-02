@@ -255,7 +255,7 @@ a:hover {
 .media-display-container > .media-credit {
   display: none;
 }
-.media-display-container > .media-credit:first-child {
+.media-display-container > .media-credit > span:first-child {
   display: none;
 }
 .collabs-list {
@@ -374,6 +374,9 @@ a:hover {
     display: block;
     width: 300px;
     margin-top: 1rem;
+  }
+  .media-display-container > .media-credit {
+    display: block;
   }
   /* BIO */
   .container--bio > .individual__section {
