@@ -196,6 +196,14 @@ a:hover {
   width: 100%;
   margin-bottom: 1.5rem;
 }
+.section--image > .media-credit {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  color: var(--clr-main);
+  margin-top: -1rem;  
+  margin-bottom: 1.5rem;
+}
 .iframe-container {
   display: block;
   position: relative;
