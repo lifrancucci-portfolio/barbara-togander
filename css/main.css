@@ -221,6 +221,8 @@ a:hover {
   position: fixed;
   top: 100px;
   right: 3rem;
+  opacity: 1;
+  pointer-events: none;
 }
 .floating-display > .media-displayed {
   width: 400px;
@@ -228,16 +230,23 @@ a:hover {
 }
 .media-display-container > .media-displayed {
   width: 400px;
-  /* margin-top: 1rem;
-  margin-bottom: 1rem; */
   display: none;
+}
+.media-displayed.appear {
+  opacity: 0;
+  animation: image-appear .2s ease-in .2s forwards;
+}
+@keyframes image-appear {
+  100% {
+    opacity: 1;
+  }
+  
 }
 .collabs-list {
   color: var(--clr-main);
   line-height: 1.5;
 }
 .collabs-list li {
-  /* position: relative; */
   width: 50%;
 }
 .collab--year {

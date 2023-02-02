@@ -4,22 +4,46 @@ const mainContainer = document.querySelector('.page_content');
 
 /* MENU DISPLAY FOR MOBILE */
 // Please adjust and check
-if( mainContainer.classList.contains('home') ) 
-{
-  const mainTitle = document.getElementById('main-title');
-  const mainNav = document.getElementById('main-navigation');
+let w = document.documentElement.clientWidth || window.innerWidth;
 
-  mainTitle.addEventListener('click', function() {
-    if(mainNav.classList.contains('active')) {
-      mainNav.classList.remove('active');
-    }
-    else
-    {
-      mainNav.classList.add('active');
-    }
-  })
+// Only execute for 600px width and below
+if( w <= 600 ) {
+
+  // On home, open menu with main title
+  if( mainContainer.classList.contains('home') ) 
+  {
+    const mainTitle = document.getElementById('main-title');
+    const mainNav = document.getElementById('main-navigation');
+
+    mainTitle.addEventListener('click', function() {
+      if(mainNav.classList.contains('active')) {
+        mainNav.classList.remove('active');
+      }
+      else
+      {
+        mainNav.classList.add('active');
+      }
+    })
+  }
+  // On other pages, go to menu on 'close page' sign
+  // else 
+  // {
+  //   let close = document.querySelector('.close');
+  //   close.addEventListener('click', function() {
+  //     if(mainNav.classList.contains('active')) {
+  //       console.log("Eyoooo");
+  //       mainNav.classList.remove('active');
+  //     }
+  //     else
+  //     {
+  //       console.log("Whaaaat??");
+  //       mainNav.classList.add('active');
+  //     }
+  //   })
+  // }
+
 }
- 
+
 /* CHANGE LANGUAGE ON CLICK */ 
 const langSelector = document.getElementById('lang-selector');
 const translatableElements = document.querySelectorAll('.translatable-element');
@@ -113,28 +137,6 @@ function changePageLanguage() {
           newLocation = newLocation.replace(subpage.esTitle, subpage.enTitle);
         }
       })
-
-      // {
-      //   case (currentLocation.includes('bio/')):
-      //     locationES = locationES + 'bio/';
-      //     locationEN = locationEN + 'bio/';
-      //   break;
-      //   case (currentLocation.includes('proyectos/')):
-      //     locationES = locationES + 'proyectos/';
-      //     locationEN = locationEN + 'projects/';
-      //   break;
-      //   case (currentLocation.includes('colaboraciones/')):
-      //     locationES = locationES + 'colaboraciones/';
-      //     locationEN = locationEN + 'collabs/';
-      //   break;
-      //   case (currentLocation.includes('entrevistas/')):
-      //     locationES = locationES + 'entrevistas/';
-      //     locationEN = locationEN + 'interviews/';
-      //   break;
-      //   default: 
-      //     location.href;
-      // }
-      // location.href = currentLocation.replace(locationES, locationEN);
     }
     // If current language is 'en', change to 'es' vesrion of the page
     if(pageLanguage == 'en') 
@@ -169,9 +171,8 @@ if( mainContainer.id == 'collabs-section' )
 
   // Get the floating display for images
   const floatingDisplay = document.getElementById('floating-display');
-
-  // Create a function to display div of class
-  // 'media-display-container inside floatingDisplay
+  
+  // Create a function to display div of class 'media-display-container inside floatingDisplay
   function displayImage(el) {
 
     let children = el.children;
@@ -180,24 +181,23 @@ if( mainContainer.id == 'collabs-section' )
     children.forEach( child => {
       if( child.classList.contains('media-display-container') )
       {
-        let emptyDisplay = floatingDisplay.innerHTML;
-        floatingDisplay.innerHTML = child.innerHTML;
-
-        // child.addEventListener('mouseout', (e) => {
-        //   console.log("Left!");
-        //   floatingDisplay.innerHTML = emptyDisplay;
-        // })
+        childImg = child.children[0];
+        childImg.classList.add('appear');
+    
+        displayContent = child.innerHTML;
+        floatingDisplay.innerHTML = displayContent;
       }
     })
   }
-  
   mediaLis.forEach( el => {
-    el.addEventListener('mouseenter', (e) => {
+    
+    el.addEventListener('mouseenter', () => {
       // Call displayImage for the element that was hovered
-      displayImage(e.target);
+      displayImage(el);
     });
-  })
 
+  })
+  
 }
 
 }
